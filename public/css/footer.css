@@ -1,0 +1,57 @@
+.fk-footer {
+    background: #0b1220;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fk-footer__brand {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.fk-footer__brand:hover {
+    color: #fff;
+}
+
+.fk-footer__logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.fk-footer__tagline {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+.fk-footer__links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+.fk-footer__links a:hover {
+    color: #2f7bff;
+}
+
+.fk-footer__divider {
+    margin: 2rem 0 1.25rem;
+    border-color: rgba(255, 255, 255, 0.08);
+    opacity: 1;
+}
+
+.fk-footer__copy {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.fk-footer__top {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.fk-footer__top:hover {
+    color: #2f7bff;
+}

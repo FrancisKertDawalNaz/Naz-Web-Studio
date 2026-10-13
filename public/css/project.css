@@ -1,0 +1,157 @@
+.fk-projects {
+    position: relative;
+    background: #0d1526;
+    overflow: hidden;
+    scroll-margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fk-projects__glow {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background: rgba(47, 123, 255, 0.18);
+    filter: blur(120px);
+    top: 20%;
+    right: -160px;
+    pointer-events: none;
+}
+
+.fk-projects__eyebrow {
+    color: #2f7bff;
+    letter-spacing: 0.2em;
+    font-size: 0.95rem;
+}
+.fk-projects__title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+}
+.fk-projects__accent {
+    color: #2f7bff;
+}
+.fk-projects__subtitle {
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.btn.fk-projects__all {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    border-radius: 50rem;
+    padding: 0.6rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.btn.fk-projects__all:hover {
+    background: #fff;
+    color: #0b1220;
+}
+
+/* card */
+.fk-projects__card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1.1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.fk-projects__card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(47, 123, 255, 0.6);
+    box-shadow: 0 18px 40px rgba(47, 123, 255, 0.18);
+}
+
+/* thumbnail (may gradient fallback kapag walang image) */
+.fk-projects__thumb {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a8a, #4c1d95);
+}
+.fk-projects__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.5s ease;
+}
+.fk-projects__card:hover .fk-projects__thumb img {
+    transform: scale(1.06);
+}
+
+/* hover icons sa ibabaw ng image */
+.fk-projects__links {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background: rgba(11, 18, 32, 0.65);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.fk-projects__card:hover .fk-projects__links {
+    opacity: 1;
+}
+
+.fk-projects__links a {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #2f7bff;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+.fk-projects__links a:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.fk-projects__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.25rem 1.25rem 1.4rem;
+}
+.fk-projects__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+.fk-projects__desc {
+    color: #94a3b8;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+}
+
+.fk-projects__tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 50rem;
+    background: rgba(47, 123, 255, 0.12);
+    border: 1px solid rgba(47, 123, 255, 0.3);
+    color: #cbd5e1;
+    font-size: 0.82rem;
+}
+
+.fk-projects__more {
+    margin-top: auto; /* laging nasa baba ng card */
+    color: #2f7bff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.fk-projects__more:hover {
+    color: #fff;
+}

@@ -1,0 +1,56 @@
+.fk-nav__link {
+    color: #212529;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.fk-nav__link:hover,
+.fk-nav__link--active {
+    color: #0d6efd; /* palitan mo ng brand color mo */
+}
+
+.fk-nav__cta {
+    border-radius: 50rem;
+    padding: 0.4rem 1.2rem;
+}
+
+.fk-nav__logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.fk-hero__eyebrow {
+    letter-spacing: 0.15em;
+    color: #0d6efd; /* palitan ng brand color mo */
+}
+
+.fk-hero__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.fk-hero__role {
+    color: #495057;
+}
+
+.fk-hero__text {
+    max-width: 540px;
+}
+
+.fk-hero__btn {
+    border-radius: 50rem;
+    padding: 0.6rem 1.6rem;
+}
+
+.fk-hero__photo {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.fk-hero {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}

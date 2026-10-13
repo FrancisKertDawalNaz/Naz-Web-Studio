@@ -1,0 +1,121 @@
+.fk-hero {
+    position: relative;
+    background: #0b1220;
+    min-height: 100vh;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+/* photo, full width, naka-center */
+.fk-hero__bg {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 50%;
+}
+
+/* dark sa left (para mabasa ang text) at sa right, maliwanag sa gitna */
+.fk-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        #0b1220 30%,
+        rgba(11, 18, 32, 0.4) 50%,
+        rgba(11, 18, 32, 0.4) 60%,
+        #0b1220 100%
+    );
+}
+
+.fk-hero__eyebrow {
+    color: #2f7bff;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+
+.fk-hero__title {
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    line-height: 1.1;
+}
+
+.fk-hero .fk-hero__role {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.fk-hero__accent {
+    color: #2f7bff;
+}
+
+.fk-hero__text {
+    max-width: 620px;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.fk-hero__btn {
+    border-radius: 50rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn.fk-hero__btn--primary {
+    background: #2f7bff;
+    border: 2px solid #2f7bff;
+    color: #fff;
+    opacity: 1;
+}
+
+.fk-hero__btn--primary:hover {
+    background: #1f66e0;
+    border-color: #1f66e0;
+    color: #fff;
+}
+
+.btn.fk-hero__btn--outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    opacity: 1;
+}
+
+.fk-hero__btn--outline:hover {
+    background: #fff;
+    color: #0b1220;
+}
+
+.fk-hero__social {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+.fk-hero__social:hover {
+    background: #2f7bff;
+    color: #fff;
+}
+
+/* mobile: photo nasa likod, mas dark ang overlay para mabasa ang text */
+@media (max-width: 991.98px) {
+    .fk-hero__bg {
+        width: 100%;
+        opacity: 0.45;
+    }
+    .fk-hero__overlay {
+        background: rgba(11, 18, 32, 0.6);
+    }
+}

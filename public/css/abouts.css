@@ -1,0 +1,167 @@
+.fk-about {
+    position: relative;
+    background: #0b1220;
+    overflow: hidden;
+    scroll-margin-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* blurred glow sa background */
+.fk-about__glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(110px);
+    pointer-events: none;
+}
+.fk-about__glow--blue {
+    width: 420px;
+    height: 420px;
+    background: rgba(47, 123, 255, 0.28);
+    top: -120px;
+    left: -100px;
+}
+.fk-about__glow--purple {
+    width: 380px;
+    height: 380px;
+    background: rgba(124, 58, 237, 0.2);
+    bottom: -120px;
+    right: -80px;
+}
+
+/* photo na may gradient border at glow */
+.fk-about__frame {
+    position: relative;
+    display: inline-block;
+    padding: 6px;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, #2f7bff, #7c3aed);
+    box-shadow: 0 0 60px rgba(47, 123, 255, 0.35);
+}
+.fk-about__photo {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 1.2rem;
+}
+
+/* floating badges */
+.fk-about__badge {
+    position: absolute;
+    padding: 0.55rem 1rem;
+    border-radius: 50rem;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.fk-about__badge i {
+    color: #2f7bff;
+    margin-right: 0.35rem;
+}
+.fk-about__badge--top {
+    top: 8%;
+    left: -8%;
+}
+.fk-about__badge--bottom {
+    bottom: 8%;
+    right: -8%;
+}
+
+.fk-about__eyebrow {
+    color: #2f7bff;
+    letter-spacing: 0.2em;
+    font-size: 0.95rem;
+}
+.fk-about__title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+}
+.fk-about__accent {
+    color: #2f7bff;
+}
+
+.fk-about__text {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 640px;
+}
+
+/* glass cards */
+.fk-about__card {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+.fk-about__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(47, 123, 255, 0.6);
+}
+.fk-about__card small {
+    color: #64748b;
+}
+.fk-about__card span {
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+.fk-about__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    margin-bottom: 0.6rem;
+    border-radius: 0.75rem;
+    background: rgba(47, 123, 255, 0.15);
+    color: #2f7bff;
+}
+
+.fk-about__chip {
+    padding: 0.4rem 1rem;
+    border-radius: 50rem;
+    background: rgba(47, 123, 255, 0.1);
+    border: 1px solid rgba(47, 123, 255, 0.35);
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+.fk-about__chip:hover {
+    background: #2f7bff;
+    color: #fff;
+}
+
+.btn.fk-about__btn {
+    background: #2f7bff;
+    border: 2px solid #2f7bff;
+    color: #fff;
+    border-radius: 50rem;
+    padding: 0.75rem 1.9rem;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(47, 123, 255, 0.35);
+    transition: all 0.2s ease;
+}
+.btn.fk-about__btn:hover {
+    background: #1f66e0;
+    border-color: #1f66e0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991.98px) {
+    .fk-about__badge--top {
+        left: 0;
+    }
+    .fk-about__badge--bottom {
+        right: 0;
+    }
+}

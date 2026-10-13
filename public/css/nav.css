@@ -1,0 +1,240 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.fk-header {
+    transition: box-shadow 0.3s ease;
+}
+
+.fk-nav {
+    background: rgba(11, 18, 32, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.3s ease;
+}
+
+/* kapag nag-scroll na */
+.fk-header--scrolled {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.fk-header--scrolled .fk-nav {
+    background: rgba(11, 18, 32, 0.95);
+}
+
+.fk-nav__brand {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.fk-nav__brand:hover {
+    color: #fff;
+}
+
+.fk-nav__logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.fk-nav__link {
+    position: relative;
+    color: #cbd5e1;
+    font-weight: 500;
+    padding: 0.5rem 0.9rem !important;
+    transition: color 0.2s ease;
+}
+
+/* blue underline na lumalabas */
+.fk-nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 2px;
+    height: 2px;
+    background: #2f7bff;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.fk-nav__link:hover,
+.fk-nav__link--active {
+    color: #fff;
+}
+
+.fk-nav__link:hover::after,
+.fk-nav__link--active::after {
+    transform: scaleX(1);
+}
+
+.btn.fk-nav__cta {
+    background: #2f7bff;
+    border: 2px solid #2f7bff;
+    color: #fff;
+    border-radius: 50rem;
+    padding: 0.45rem 1.4rem;
+    font-weight: 500;
+    box-shadow: 0 6px 20px rgba(47, 123, 255, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn.fk-nav__cta:hover {
+    background: #1f66e0;
+    border-color: #1f66e0;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* hamburger na puti para kita sa dark bg */
+.fk-nav__toggle {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.fk-nav__toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(47, 123, 255, 0.4);
+}
+
+.fk-nav__toggle .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* mobile menu */
+@media (max-width: 767.98px) {
+    .fk-nav__list {
+        padding: 1rem 0 0.5rem;
+    }
+
+    .fk-nav__link::after {
+        left: 0;
+        right: auto;
+        width: 30px;
+    }
+}
+.fk-contact.offcanvas {
+    --bs-offcanvas-bg: #0b1220;
+    --bs-offcanvas-color: #fff;
+    --bs-offcanvas-width: 420px;
+    background-color: #0b1220 !important;
+    color: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.fk-contact .offcanvas-header,
+.fk-contact .offcanvas-body {
+    background-color: #0b1220;
+}
+
+/* para hindi pumuti ang inputs kapag nag-autofill ang browser */
+.form-control.fk-contact__input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #131c30 inset;
+    -webkit-text-fill-color: #fff;
+}
+
+.fk-contact__eyebrow {
+    color: #2f7bff;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+}
+
+.fk-contact__accent {
+    color: #2f7bff;
+}
+
+.fk-contact .offcanvas-body {
+    padding: 1.5rem;
+}
+
+.fk-contact__text {
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.fk-contact__item {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    text-decoration: none;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+a.fk-contact__item:hover {
+    border-color: rgba(47, 123, 255, 0.6);
+    transform: translateX(4px);
+    color: #fff;
+}
+
+.fk-contact__item i {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7rem;
+    background: rgba(47, 123, 255, 0.15);
+    color: #2f7bff;
+}
+
+.fk-contact__item small {
+    display: block;
+    color: #64748b;
+}
+
+.fk-contact__item span {
+    font-weight: 500;
+    word-break: break-word;
+}
+
+.fk-contact__label {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.form-control.fk-contact__input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-radius: 0.7rem;
+    padding: 0.7rem 0.9rem;
+}
+
+.form-control.fk-contact__input::placeholder {
+    color: #64748b;
+}
+
+.form-control.fk-contact__input:focus {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: #2f7bff;
+    box-shadow: 0 0 0 0.2rem rgba(47, 123, 255, 0.25);
+    color: #fff;
+}
+
+.btn.fk-contact__send {
+    background: #2f7bff;
+    border: 2px solid #2f7bff;
+    color: #fff;
+    border-radius: 50rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 8px 25px rgba(47, 123, 255, 0.35);
+    transition: all 0.2s ease;
+}
+
+.btn.fk-contact__send:hover {
+    background: #1f66e0;
+    border-color: #1f66e0;
+    color: #fff;
+}
