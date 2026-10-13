@@ -38,9 +38,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 
+{{--
 <!-- MAPBOX -->
 <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script> --}}
 
 <!-- Template Main JS File -->
 <script src="{{ asset('js/global.js') }}?v={{ filemtime(public_path('js/global.js')) }}"></script>
@@ -54,15 +55,16 @@
 <script src="{{ URL::asset('js/admin/audit.js')}}"></script>
 <script src="{{ URL::asset('js/admin/app.js')}}"></script>
 <script
-  src="{{ asset('js/admin/users_management.js') }}?v={{ filemtime(public_path('js/admin/users_management.js')) }}"></script>
+  src="{{ asset('js/admin/users_management.js') }}?v={{ filemtime(public_path('js/admin/users_management.js')) }}">
+</script>
 <script src="{{ asset('js/admin/test.js') }}?v={{ filemtime(public_path('js/admin/test.js')) }}"></script>
 <script src="{{ asset('js/admin/map.js') }}?v={{ filemtime(public_path('js/admin/map.js')) }}"></script>
 
 
 @if(Request::routeIs('videocall'))
-  <script src="https://sdk.videosdk.live/js-sdk/0.0.82/videosdk.js"></script>
-  <script src="{{ asset('js/index.js') }}"></script>
-  <script src="{{ asset('js/config.js') }}"></script>
+<script src="https://sdk.videosdk.live/js-sdk/0.0.82/videosdk.js"></script>
+<script src="{{ asset('js/index.js') }}"></script>
+<script src="{{ asset('js/config.js') }}"></script>
 @endif
 </body>
 
