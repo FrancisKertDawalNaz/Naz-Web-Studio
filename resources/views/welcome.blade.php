@@ -74,10 +74,6 @@
                         </button>
 
                         <div class="fk-corp__divider"><span>or</span></div>
-
-                        <a href="/signup" class="btn fk-corp__btn fk-corp__btn--outline w-100">
-                            Create an account
-                        </a>
                     </form>
 
                     <p class="fk-corp__note">
@@ -85,20 +81,8 @@
                     </p>
                 </div>
             </section>
-
         </div>
     </div>
 </main>
-
-<script>
-    document.getElementById('togglePassword').addEventListener('click', function () {
-        const input = document.getElementById('login_counselor_password');
-        const icon = this.querySelector('i');
-        const show = input.type === 'password';
-        input.type = show ? 'text' : 'password';
-        icon.className = show ? 'bi bi-eye-slash' : 'bi bi-eye';
-        this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
-    });
-</script>
 
 @include('partials.__footer')

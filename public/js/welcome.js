@@ -17,7 +17,7 @@ $("#adminLoginForm").on("submit", function (e) {
                 response.message,
                 "Login Success",
                 "blue",
-                response.redirect
+                response.redirect,
             );
         },
         error: function (xhr) {
@@ -26,7 +26,7 @@ $("#adminLoginForm").on("submit", function (e) {
                 global_showalert(
                     xhr.responseJSON.message,
                     "Warning!",
-                    "orange"
+                    "orange",
                 );
             } else {
                 let response = JSON.parse(xhr.responseText);
@@ -77,3 +77,17 @@ $(document).on("submit", "#registerForm", function (e) {
         },
     });
 });
+
+document
+    .getElementById("togglePassword")
+    .addEventListener("click", function () {
+        const input = document.getElementById("login_counselor_password");
+        const icon = this.querySelector("i");
+        const show = input.type === "password";
+        input.type = show ? "text" : "password";
+        icon.className = show ? "bi bi-eye-slash" : "bi bi-eye";
+        this.setAttribute(
+            "aria-label",
+            show ? "Hide password" : "Show password",
+        );
+    });

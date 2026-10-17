@@ -30,6 +30,8 @@
   <link href="{{ URL::asset('css/lightbox.css')}}" rel="stylesheet">
   <link href="{{ URL::asset('css/admin/style.css')}}" rel="stylesheet">
 
+  <link href="{{ URL::asset('css/admin/dashboard.css')}}" rel="stylesheet">
+
   <!-- Template Main CSS File -->
   <link href="{{ URL::asset('theme/assets/css/style.css')}}" rel="stylesheet">
   <!-- Summernote -->
