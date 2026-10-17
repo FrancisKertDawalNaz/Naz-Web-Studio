@@ -29,18 +29,18 @@ $certificates = [
 
     <div class="container position-relative py-5">
         <div class="text-center mb-5 pt-4">
-            <p class="fk-certificates__eyebrow text-uppercase fw-semibold mb-2">Achievements</p>
-            <h2 class="fk-certificates__title fw-bold text-white mb-2">
+            <p class="fk-certificates__eyebrow text-uppercase fw-semibold mb-2" data-aos="fade-down">Achievements</p>
+            <h2 class="fk-certificates__title fw-bold text-white mb-2" data-aos="fade-up" data-aos-delay="100">
                 My <span class="fk-certificates__accent">Certificates</span>
             </h2>
-            <p class="fk-certificates__subtitle mx-auto mb-0">
+            <p class="fk-certificates__subtitle mx-auto mb-0" data-aos="fade-up" data-aos-delay="200">
                 Mga training at certifications na nagpalakas ng skills ko bilang developer.
             </p>
         </div>
 
         <div class="row g-4">
             @foreach ($certificates as $cert)
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                 <article class="fk-certificates__card h-100">
                     <button type="button" class="fk-certificates__thumb" data-bs-toggle="modal"
                         data-bs-target="#fkCertModal" data-img="{{ asset($cert['image']) }}"

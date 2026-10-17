@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="{{ URL::asset('css/project.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/certificate.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/footer.css') }}">
-
     <!-- Vendor CSS Files -->
     <link href="{{ URL::asset('Vesperr/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('Vesperr/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
@@ -44,6 +43,7 @@
     <link href="{{ URL::asset('Vesperr/assets/css/main.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ URL::asset('css/welcome.css') }}">
 
     <!-- =======================================================
       * Template Name: Vesperr

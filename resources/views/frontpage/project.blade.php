@@ -32,7 +32,7 @@ $projects = [
 
     <div class="container position-relative py-5">
         <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-5 pt-4">
-            <div>
+            <div data-aos="fade-right">
                 <p class="fk-projects__eyebrow text-uppercase fw-semibold mb-2">My Work</p>
                 <h2 class="fk-projects__title fw-bold text-white mb-2">
                     Featured <span class="fk-projects__accent">Projects</span>
@@ -41,12 +41,12 @@ $projects = [
                     Ilan sa mga ginawa ko para sa personal projects at clients.
                 </p>
             </div>
-            <a href="#" class="btn fk-projects__all">View All Projects</a>
+            <a href="#" class="btn fk-projects__all" data-aos="fade-left">View All Projects</a>
         </div>
 
         <div class="row g-4">
             @foreach ($projects as $project)
-            <div class="col-md-6 col-lg-4">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ $loop->index * 100 }}">
                 <article class="fk-projects__card h-100">
                     <div class="fk-projects__thumb">
                         <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}" loading="lazy"
